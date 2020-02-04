@@ -1,13 +1,28 @@
 import React from 'react';
+import {
+  BrowserRouter,
+  Switch,
+  Route,
+} from 'react-router-dom';
 
-import About from './pages/About/About'
+import './App.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+import Navbar from './components/UI/Navbar'
+import Footer from './components/UI/Footer'
+
+import Homepage from './pages/Homepage/Homepage'
 
 const App: React.FC = () => {
-  return (
-    <div className="App">
-      <About text="About page"/>
 
-    </div>
+  return (
+    <BrowserRouter>
+      <Navbar />
+      <Switch>
+        <Route exact path='/' component={Homepage} />
+      </Switch>
+      <Footer />
+    </BrowserRouter>
   );
 }
 
