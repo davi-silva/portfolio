@@ -118,4 +118,10 @@ export const ProjectDescription = styled.p`
   }
 `;
 
-
+export const TechUsed = styled.p`
+  color: #75b6c5;
+  font-size: 14px;
+  @media (max-width: 768px) {
+    text-align: center;
+  }
+`;

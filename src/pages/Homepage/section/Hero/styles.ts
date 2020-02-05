@@ -5,6 +5,7 @@ import {
 
 export const Wrapper = styled.div`
   background: #0b1628;
+  padding: 20px 0 10px 0;
 `;
 
 

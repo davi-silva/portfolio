@@ -20,13 +20,13 @@ export const SocialMediaUL = styled.ul`
 `;
 
 export const LinkTo = styled(Link)`
-  color: #fff;
+  color: #75b6c5;
+  transition: all .2s ease-in-out;
   &:hover {
     color: #fff;
     text-decoration: none;
   }
   svg {
     font-size: 25px;
-    filter: drop-shadow( 0px 1px 2px rgba(102, 158, 171, .7));
   }
 `;

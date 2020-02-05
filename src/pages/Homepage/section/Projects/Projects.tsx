@@ -9,6 +9,7 @@ import {
   Position,
   ProjectName,
   ProjectDescription,
+  TechUsed,
 } from './styles'
 
 import Crypticactivist from '../../../../assets/img/crypticactivist.gif'
@@ -22,11 +23,12 @@ interface Props{
   position: string,
   name: string,
   description: string,
+  tech: string,
 }
 
 
 
-const ProjectComponent: React.FC<Props> = ({url, image, position, name, description}) => {
+const ProjectComponent: React.FC<Props> = ({url, image, position, name, description, tech}) => {
   return (
     <LinkToProject to={url} target="_blank">
       <Div>
@@ -46,6 +48,9 @@ const ProjectComponent: React.FC<Props> = ({url, image, position, name, descript
         <ProjectDescription>
           {description}
         </ProjectDescription>
+        <TechUsed>
+          {`${tech}`}
+        </TechUsed>
       </Div>
     </LinkToProject>
   );
@@ -57,16 +62,17 @@ const Projects: React.FC = () => {
       <div className="container">
         <div className="row">
           <div className="col-12">
-            <Title>Online Business</Title>
+            <Title>Online Businesses</Title>
             <ProjectComponent
               url="//crypticactivist.com"
               image={Crypticactivist}
-              position="CEO"
+              position="CEO & Founder"
               name="Cryptic Activist"
               description="An online platform for publishing blog posts and articles
               by the community, weekly podcast episode, and online courses primarily
               focused on blockchain development, blockchain real-life applcations,
               cypherpunk and libertarian topics."
+              tech="React.js, React Native, Redux, Redux Saga, Solidity, ERC-20, Python, C++, Node.js, Express.js MongoDB"
             />
             <ProjectComponent
               url="//canadacannabyss.com"
@@ -74,6 +80,7 @@ const Projects: React.FC = () => {
               position="CTO & Co-founder"
               name="Canada Cannabyss"
               description="An e-cigarettes e-Commerce for the North America market."
+              tech="Python, Django, TensorFlow, matplotlib, Postgres"
             />
             <ProjectComponent
               url="//canadaecigs.com"
@@ -81,6 +88,7 @@ const Projects: React.FC = () => {
               position="CTO & Co-founder"
               name="Canada E-Cigs"
               description="An weed products e-Commerce for the North America market."
+              tech="Python, Django, TensorFlow, matplotlib, Postgres"
             />
           </div>
         </div>
