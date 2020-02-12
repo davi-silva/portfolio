@@ -77,3 +77,24 @@ export const ArrowDown = styled.div`
     font-size: 20px;
   }
 `;
+
+export const DownloadResume = styled.a`
+  color: #fff;
+  background: #15253c;
+  padding: 8px 18px;
+  font-size: 24px;
+  border-radius: 5px;
+  margin: 26px auto 0 auto;
+  display: table;
+  &:hover {
+    color: #fff;
+    text-decoration: none;
+  }
+  @media (max-width: 500px) {
+    font-size: 21px;
+    margin: 26px auto 15px auto;
+  }
+  @media (max-width: 372px) {
+    font-size: 19px;
+  }
+`;

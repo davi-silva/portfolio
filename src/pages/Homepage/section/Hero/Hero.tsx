@@ -11,6 +11,7 @@ import {
   Brand,
   Languages,
   Sep,
+  DownloadResume,
 } from './styles';
 
 const Hero: React.FC = () => {
@@ -19,7 +20,7 @@ const Hero: React.FC = () => {
     <Wrapper>
       <div className="container">
         <div className="row">
-          <div className="col-12">
+          <div className="col-lg-8 col-md-8 col-sm-8 col-12">
             <Headline>
               Full Stack Engineer
             </Headline>
@@ -29,6 +30,11 @@ const Hero: React.FC = () => {
             <Languages>
               English <Sep>|</Sep> Portuguese <Sep>|</Sep> Spanish
             </Languages>
+          </div>
+          <div className="col-lg-4 col-md-4 col-sm-4 col-12">
+            <DownloadResume href={process.env.PUBLIC_URL + '/davi_resume.pdf'} target="_blank">
+              Resume
+            </DownloadResume>
           </div>
           <div className="col-12">
             <ArrowDown>
